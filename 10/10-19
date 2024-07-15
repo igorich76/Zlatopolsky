@@ -1,0 +1,15 @@
+{Златопольский (10.19) 
+Даны два натуральных числа. Выяснить, в каком из них больше цифр.
+(Определить функцию для расчета количества цифр натурального числа.)}
+##
+function MaxDigit(a, b: integer): integer;
+begin
+  var len_a := Length(a.ToString);
+  var len_b := Length(b.ToString);
+  if (len_a <> len_b) then 
+    Print('Большее число:', (len_a > len_b) ? a : b)
+      else Print('Числа равны! Попробуйте ещё раз.');
+end;
+//
+Println('Введите два числа:');
+MaxDigit(ReadInteger, ReadInteger)
