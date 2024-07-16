@@ -55,3 +55,26 @@ end;
 var x := ReadlnInteger('Введите 1-e число:');
 var y := ReadlnInteger('Введите 2-e число:');
 Print(F(x,y))
+/////////////////////////////// вариант с помощью срезов ////////////////////////
+##
+function F(a,b: integer): string;
+begin
+var a_a := a.ToString;
+var b_b := b.ToString;
+var (sum_a, sum_b) := (0, 0);
+//
+for var i := 1 to Length(a_a) do sum_a += a_a[i:i+1].ToInteger;
+for var j := 1 to Length(b_b) do sum_b += b_b[j:j+1].ToInteger;
+//
+Println($'Сумма цифр первого числа: {sum_a}');
+Println($'Сумма цифр второго числа: {sum_b}');
+//
+if (sum_a > sum_b) then 
+  Print($'Первое число по сумме цифр {sum_a} больше, чем второе число с его суммой цифр {sum_b}')
+else 
+  Print($'Второе число по сумме цифр {sum_b} больше, чем первое число с его суммой цифр {sum_a}');
+end;
+//
+var x := ReadlnInteger('Введите 1-e число:');
+var y := ReadlnInteger('Введите 2-e число:');
+Print(F(x,y))
