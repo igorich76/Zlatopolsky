@@ -1,0 +1,6 @@
+## //Златопольский, 10.1
+function F(a,b,c: real) := (Sqrt(a) + a)/2 + (Sqrt(b) + b)/2 + (Sqrt(c) + c)/2;
+var x := F(ReadlnInteger('Введите 1-е число:'),
+            ReadlnInteger('Введите 2-е число:'),
+              ReadlnInteger('Введите 3-е число:'));
+Print($'{x:f3}');
