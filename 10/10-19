@@ -12,4 +12,4 @@ begin
 end;
 //
 Println('Введите два числа:');
-MaxDigit(ReadInteger, ReadInteger)
+MaxDigit(ReadlnInteger('1-e число:'), ReadlnInteger('2-e число:'))
