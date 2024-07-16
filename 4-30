@@ -1,0 +1,16 @@
+## //Златопольский, 4.30
+{Дано трехзначное число.
+а) Верно ли, что все его цифры одинаковые?
+б) Определить, есть ли среди его цифр одинаковые.}
+var digit := ReadlnInteger;
+var digit_3 := digit mod 10;
+var digit_2 := digit div 10 mod 10;
+var digit_1 := digit div 100;
+var cnt := 0;
+//
+if (digit_1 = digit_2) then cnt += 1;
+if (digit_1 = digit_3) then cnt += 1;
+if (digit_2 = digit_3) then cnt += 1;
+if cnt = 3 then Print('Все цифры одинаковые!')
+  else if (cnt = 1) then Print('Есть цифры одинаковые')
+    else if (cnt = 0) then Print('Все цифры РАЗНЫЕ!');
