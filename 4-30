@@ -23,6 +23,5 @@ if (s[2:3] = s[3:]) then cnt += 1;
 if (s[:2] = s[3:]) then cnt += 1;
 //
 if (cnt = 3) then Print('Все цифры одинаковые!')
-  else if (cnt = 1
-  ) then Print('Есть цифры одинаковые')
+  else if (cnt = 1) then Print('Есть цифры одинаковые')
     else if (cnt = 0) then Print('Все цифры РАЗНЫЕ!');
