@@ -13,3 +13,13 @@ end;
 //
 Println('Введите два числа:');
 MaxDigit(ReadlnInteger('1-e число:'), ReadlnInteger('2-e число:'))
+//////////// после советов ментора (я сам делал!) ////////////
+##
+function CountDigit(a: integer) := Length(a.ToString);
+//
+var (x, y) := ReadlnInteger2('Введите два числа:');
+var (RezX, RezY) := (CountDigit(x),CountDigit(y));
+//
+if (RezX > RezY) then Print($'Большее число: {x}, с количеством цифр {RezX}')
+   else if (RezX < RezY) then Print($'Большее число: {y}, с количеством цифр {RezY}')
+       else Print('Числа равны! Попробуйте ещё раз.');
